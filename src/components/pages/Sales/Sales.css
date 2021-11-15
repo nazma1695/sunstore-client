@@ -1,0 +1,17 @@
+.para {
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+.btn-p {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  padding: 10px 18px;
+}
+.btn-p:hover {
+  background: #d3bda7;
+  border-color: #d3bda7;
+  color: #1a1a1a;
+}

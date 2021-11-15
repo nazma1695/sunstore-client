@@ -1,0 +1,29 @@
+.footer {
+  background-color: #25262c;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.footer h5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.footer ul li {
+  list-style: none;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #d2e7f8;
+  margin-left: -20px;
+}
+.footer-para {
+  color: #d2e7f8;
+  font-size: 14px;
+}
+.footer-copyright {
+  border-top: 1px dashed #d2e7f8;
+}
+
+.footer-copyright p {
+  color: #d2e7f8;
+}

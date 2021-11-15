@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Depression Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://templates.hibootstrap.com/perhu/default/assets/img/services/service-bg-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Individual Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://templates.hibootstrap.com/perhu/default/assets/img/services/service-bg-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Couples Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://templates.hibootstrap.com/perhu/default/assets/img/services/service-bg-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Children Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://i.ibb.co/CMwSCnc/female-psychologist-helping-girl-speech-therapy.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Anti-stress Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://templates.hibootstrap.com/perhu/default/assets/img/services/service-bg-4.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Post-Divorse Therapy",
+    "description": "Therapy (or psychotherapy, sometimes called talk therapy) is the process of working with a licensed therapist or counselor to develop positive thinking and coping skills .",
+    "img": "https://templates.hibootstrap.com/perhu/default/assets/img/blog/blog-8.jpg"
+  }
+]

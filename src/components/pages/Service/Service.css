@@ -1,0 +1,28 @@
+.service img {
+  width: 100%;
+}
+.service-text {
+  /* border: 1px solid rgb(199, 199, 199); */
+  padding: 20px;
+}
+.service-text p {
+  margin-left: -10px !important;
+}
+.service-card:hover img {
+  overflow: hidden;
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+.btn-p {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  padding: 10px 18px;
+}
+.btn-p:hover {
+  background: #d3bda7;
+  border-color: #d3bda7;
+  color: #1a1a1a;
+}
