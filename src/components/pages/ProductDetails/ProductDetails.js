@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:9000/addOrders", {
+    fetch("https://morning-journey-11676.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -31,7 +31,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:9000/services/${serviceId}`)
+    fetch(`https://morning-journey-11676.herokuapp.com/services/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -43,8 +43,8 @@ const ProductDetails = () => {
           <div className="row my-5">
             <div className="col-md-6">
               <img className="w-50" src={service.img} alt="" />
-              <p>{service?.description}</p>
               <h1>{service?.name}</h1>
+              <p>{service?.description}</p>
               <h1> {service?.price}</h1>
             </div>
             <div className="col-md-6">

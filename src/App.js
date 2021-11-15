@@ -5,9 +5,7 @@ import Header from "./shared/Header/Header";
 import Home from "./components/pages/Home/Home";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-// import ServiceDetails from "./components/pages/ServiceDetails/ServicDetails";
 import Services from "./components/pages/Services/Services";
-import Blog from "./components/pages/Blog/blog";
 import Contact from "./components/pages/Contact/Contact";
 import Login from "./components/pages/Login/Login";
 import NotFound from "./components/pages/NotFound/NotFound";
@@ -47,12 +45,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
-            <PrivateRoute path="/blog">
-              <Blog></Blog>
-            </PrivateRoute>
-            <Route path="/contact">
+            <PrivateRoute path="/contact">
               <Contact></Contact>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

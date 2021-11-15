@@ -1,14 +1,14 @@
 .service-offer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 20px; */
 }
 .service-offer-text {
-  margin-left: -20px;
-  padding: 20px;
+  /* margin-left: -20px;
+  padding: 20px; */
 }
 .service-offer-text p {
-  margin-left: -10px;
+  /* margin-left: -10px; */
 }
 /* Make it responsive  */
 @media only screen and (max-width: 688px) {

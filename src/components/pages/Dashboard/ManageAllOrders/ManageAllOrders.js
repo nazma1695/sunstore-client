@@ -11,7 +11,7 @@ const ManageAllOrders = () => {
 
   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:9000/allOrders")
+    fetch("https://morning-journey-11676.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -24,11 +24,14 @@ const ManageAllOrders = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:9000/statusUpdate/${orderId}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `https://morning-journey-11676.herokuapp.com/statusUpdate/${orderId}`,
+      {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((result) => console.log(result));
   };

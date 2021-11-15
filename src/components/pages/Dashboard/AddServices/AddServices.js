@@ -12,13 +12,15 @@ const AddServices = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("http://localhost:9000/services", data).then((res) => {
-      if (res.data.insertedId) {
-        console.log(data);
-        alert("Added successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://morning-journey-11676.herokuapp.com/services", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          console.log(data);
+          alert("Added successfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-offer text-center mt-5">

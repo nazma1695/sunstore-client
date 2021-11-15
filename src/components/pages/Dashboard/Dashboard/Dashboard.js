@@ -16,7 +16,9 @@ const Dashboard = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:9000/checkAdmin/${user?.email}`)
+    fetch(
+      `https://morning-journey-11676.herokuapp.com/checkAdmin/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {
@@ -34,29 +36,44 @@ const Dashboard = () => {
           <div className="col-md-3">
             <div className="dashboard px-5">
               <h5 className="text-center py-3">Dashboard</h5>
-              <Link to={`${url}`}>
-                <li className="dashboard-menu mt-5">My Order</li>
-              </Link>
-
-              <Link to={`${url}/pay`}>
-                <li className="dashboard-menu ">Pay</li>
-              </Link>
-
-              <Link to={`${url}/review`}>
-                <li className="dashboard-menu">Review</li>
-              </Link>
               <div className="admin-dashboard my-5">
                 {isAdmin && (
-                  <Link to={`${url}/addService`}>
-                    <li className="dashboard-menu">Add Service</li>
+                  <Link to={`${url}/addCollection`}>
+                    <li className="dashboard-menu">Add Collection</li>
                   </Link>
                 )}
-                <Link to={`${url}/makeAdmin`}>
-                  <li className="dashboard-menu">Make Admin</li>
-                </Link>
-                <Link to={`${url}/manageAllOrder`}>
-                  <li className="dashboard-menu">Manage All Orders</li>
-                </Link>
+                {isAdmin && (
+                  <Link to={`${url}/makeAdmin`}>
+                    <li className="dashboard-menu">Make Admin</li>
+                  </Link>
+                )}
+                {isAdmin && (
+                  <Link to={`${url}/manageProduct`}>
+                    <li className="dashboard-menu">Manage Product</li>
+                  </Link>
+                )}
+                {isAdmin && (
+                  <Link to={`${url}/manageAllOrder`}>
+                    <li className="dashboard-menu">Manage All Orders</li>
+                  </Link>
+                )}
+              </div>
+              <div className="user-dashboard">
+                {isAdmin || (
+                  <Link to={`${url}`}>
+                    <li className="dashboard-menu mt-5">My Order</li>
+                  </Link>
+                )}
+                {isAdmin || (
+                  <Link to={`${url}/pay`}>
+                    <li className="dashboard-menu ">Pay</li>
+                  </Link>
+                )}
+                {isAdmin || (
+                  <Link to={`${url}/review`}>
+                    <li className="dashboard-menu">Review</li>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -77,7 +94,7 @@ const Dashboard = () => {
               <Route exact path={`${path}/manageAllOrder`}>
                 <ManageAllOrders></ManageAllOrders>
               </Route>
-              <Route exact path={`${path}/addService`}>
+              <Route exact path={`${path}/addCollection`}>
                 <AddProduct></AddProduct>
               </Route>
               <Route exact path={`${path}/makeAdmin`}>

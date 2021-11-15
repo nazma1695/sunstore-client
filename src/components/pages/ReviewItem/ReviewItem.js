@@ -6,7 +6,7 @@ const ReviewItem = (service) => {
   const { register, handleSubmit } = useForm();
   const { user } = useAuth();
   const onSubmit = (data) => {
-    fetch("http://localhost:9000/addReview", {
+    fetch("https://morning-journey-11676.herokuapp.com/addReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -17,7 +17,7 @@ const ReviewItem = (service) => {
     console.log(data);
   };
   return (
-    <div>
+    <div className="my-3 w-25 m-auto">
       <h1>Review</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -37,7 +37,7 @@ const ReviewItem = (service) => {
         <br />
 
         <input
-          className="submit-btn btn btn-danger mt-3"
+          className="submit-btn btn btn-success mt-3"
           type="submit"
           value="Register"
         />

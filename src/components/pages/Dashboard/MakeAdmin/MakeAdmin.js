@@ -1,21 +1,22 @@
 import { Alert, Button } from "react-bootstrap";
 import React, { useState } from "react";
-import useAuth from "../../../../hooks/useAuth";
+// import useAuth from "../../../../hooks/useAuth";
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
-  const { token } = useAuth();
+  // const { register, handleAdminSubmit } = useForm();
+  // const {} = useAuth();
+  // const { token } = useAuth();
 
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:9000/users/admin", {
+    fetch("https://morning-journey-11676.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
-        authorization: `Bearer ${token}`,
         "content-type": "application/json",
       },
       body: JSON.stringify(user),
@@ -31,7 +32,7 @@ const MakeAdmin = () => {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="my-3 w-25 m-auto">
       <h2>Make an Admin</h2>
       <form onSubmit={handleAdminSubmit}>
         <input
@@ -47,6 +48,23 @@ const MakeAdmin = () => {
           Make Admin
         </Button>
       </form>
+      {/* <form onSubmit={handleAdminSubmit}>
+        <input
+          className="input-field"
+          name="email"
+          value={user?.email}
+          type="email"
+          {...register("email", { required: true })}
+        />
+        <br />
+        <br />
+
+        <input
+          className="submit-btn btn btn-danger mt-3"
+          type="submit"
+          value="Register"
+        />
+      </form> */}
       {success && <Alert severity="success">Made Admin successfully!</Alert>}
     </div>
   );
