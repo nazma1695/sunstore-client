@@ -1,8 +1,6 @@
  # Sunglass Mart
- 
-Live site- https://sunstore-769ce.web.app/
 
-[Sunglass Mart](https://sunstore-769ce.web.app/)
+Sunglass store [Sunglass Mart](https://sunstore-769ce.web.app/)
 
 ## About Sunglass Mart
 
